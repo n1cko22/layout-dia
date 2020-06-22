@@ -1,0 +1,19 @@
+.form {
+
+  &__input {
+    display: block;
+    width: 100%;
+    line-height: 46px;
+    margin-bottom: 20px;
+    font-family: $main-font;
+    font-size: 14.4px;
+    font-weight: bold;
+    color: $text-color;
+    background: none;
+    border-bottom: 1px solid darken($light-color, 10);
+
+    &::placeholder {
+      color: $dark-color;
+    }
+  }
+}

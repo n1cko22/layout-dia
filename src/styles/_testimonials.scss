@@ -1,0 +1,128 @@
+.testimonials {
+  position: relative;
+  top: 120px;
+
+  &__sub-title,
+  &__title {
+    width: 40%;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    width: 29%;
+    padding: 40px 32px 60px;
+    margin-bottom: 40px;
+    text-align: center;
+    background-color: $light-color;
+    box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.05);
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 160px;
+      width: 64px;
+      top: 40px;
+      left: calc(50% - 32px);
+      transform: rotate(35deg);
+      border-radius: 32px;
+    }
+
+    &:nth-child(1) {
+
+      &::before {
+        background-color: $main-color;
+      }
+    }
+
+    &:nth-child(2) {
+
+      &::before {
+        background-color: $accent-color;
+      }
+    }
+
+    &:nth-child(3) {
+
+      &::before {
+        background-color: $option-color-1;
+      }
+    }
+  }
+
+  &__img-container {
+    width: 64px;
+    height: 125px;
+    margin: 50px auto 16px;
+    overflow: hidden;
+    border-radius: 32px;
+    transform: rotate(-20deg);
+  }
+
+  &__img {
+    width: 64px;
+    height: 125px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    transform: rotate(20deg) scale(1.29);
+  }
+
+  &__text {
+    padding-bottom: 64px;
+    font-size: 14.4px;
+    font-style: italic;
+  }
+}
+
+@media screen and (max-width: $break-point-lg) {
+  .testimonials {
+
+    &__sub-title,
+    &__title {
+      width: 60%;
+      margin: 0 auto;
+    }
+
+    &__list {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    &__item {
+      width: 45%;
+    }
+  }
+}
+
+@media screen and (max-width: $break-point-md) {
+  .testimonials {
+    padding-top: 0;
+
+    &__sub-title,
+    &__title {
+      width: 90%;
+      color: $light-color;
+    }
+    &__sub-title{
+      background-image: url(/img/vector-white.png)
+    }
+
+
+    &__list {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__item {
+      width: 80%;
+    }
+  }
+}

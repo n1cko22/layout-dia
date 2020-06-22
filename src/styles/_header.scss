@@ -1,0 +1,158 @@
+.header {
+  background:  linear-gradient(106deg,$main-color 0% 56%,#44d3f8 56%, $main-color 70%,#44d3f8 70%,$main-color 84%, #44d3f8 84%, $main-color 86%, #fff 86%);
+
+  &__top-bar {
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 80px;
+  }
+
+  &__logo {
+    padding-right: 10%;
+  }
+
+  &__nav {
+    width: 60%;
+  }
+
+  &__cta {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__heading,
+  &__paragraph,
+  &__button {
+    margin-left: 10%;
+    margin-right: 15%;
+  }
+
+  &__heading {
+    margin-bottom: 22px;
+    font-size: 64px;
+    font-weight: 900;
+    color: $light-color;
+  }
+
+  &__paragraph {
+    margin-bottom: 42px;
+    font-size: 24px;
+    color: $light-color;
+  }
+
+  &__button {
+    margin-bottom: 80px;
+  }
+
+  &__slider {
+    position: relative;
+    height: $slider-height;
+    top: $slider-height / 2;
+    margin-top: -$slider-height / 2;
+    transition: height 1s;
+  }
+
+  &__padding-clear {
+    padding-top: $slider-height / 2;
+  }
+
+  &__social-links-list {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    position: absolute;
+    transform: rotate(90deg) translate(0, -100%);
+  }
+
+  &__social-link {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: $dark-color;
+
+    &:hover {
+      color: darken($dark-color, 10%);
+    }
+  }
+}
+
+@media screen and (max-width: $break-point-lg) {
+  .header {
+    background: linear-gradient(105deg, $main-color 0%, $main-color 90%, $light-color 90%, $light-color 100%);
+
+    &__top-bar {
+      justify-content: space-between;
+    }
+
+    &__nav {
+      width: 85%;
+    }
+
+    &__heading,
+    &__paragraph,
+    &__button {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &__slider {
+      height: $slider-height-lg;
+      top: $slider-height-lg / 2;
+      margin-top: -$slider-height-lg / 2;
+    }
+  }
+}
+
+@media screen and (max-width: $break-point-md) {
+  .header {
+
+    &__logo {
+      padding-right: 0;
+      margin-bottom: 20px;
+    }
+
+    &__top-bar {
+      flex-direction: column;
+    }
+
+    &__nav {
+      width: 100%;
+    }
+
+    &__cta {
+      align-items: center;
+    }
+
+    &__heading {
+      font-size: 48px;
+    }
+
+    &__paragraph {
+      font-size: 22px;
+    }
+
+    &__social-links-list {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: $break-point-md) {
+  .header {
+
+    &__heading {
+      text-align: center;
+    }
+
+    &__slider {
+      height: $slider-height-md;
+      top: $slider-height-md / 2;
+      margin-top: -$slider-height-md / 2;
+    }
+  }
+}
+

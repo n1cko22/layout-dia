@@ -1,0 +1,41 @@
+.cta {
+  padding: 250px 0 160px;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+
+  &__title {
+    font-size: 48px;
+    font-weight: 900;
+    color: $dark-color;
+  }
+
+  &__text {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  &__button {
+    margin: 20px auto;
+  }
+}
+
+@media screen and (max-width: $break-point-lg) {
+  .cta {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: $break-point-md) {
+  .cta {
+    width: 90%;
+
+    &__title {
+      font-size: 38px;
+    }
+
+    &__text {
+      font-size: 20px;
+    }
+  }
+}

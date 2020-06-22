@@ -1,0 +1,33 @@
+body {
+  font-family: $main-font;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $text-color;
+}
+main {
+  overflow: hidden;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: $container-max-width;
+  min-width: 905px;
+  width: 80%;
+
+  @media screen and (max-width: $break-point-lg) {
+    min-width: 280px;
+    width: 85%;
+  }
+}
+
+.section {
+  background-color: $light-color;
+
+  &--light {
+    background-color: darken($light-color, 2%);
+  }
+
+  &--dark {
+    background-color: $main-color;
+  }
+}

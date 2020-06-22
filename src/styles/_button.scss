@@ -1,0 +1,37 @@
+.button {
+  display: block;
+  width: max-content;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 1em 4.065em;
+  border-radius: 4.065em;
+  transition: background-color .5s;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &--light {
+    color: $dark-color;
+    background-color: $light-color;
+
+    &:hover {
+      background-color: darken($light-color, 10%);
+    }
+  }
+
+  &--dark {
+    color: $light-color;
+    background-color: $dark-blue-color;
+
+    &:hover {
+      background-color: darken($main-color, 10%);
+    }
+  }
+}
+
+@media screen and (max-width: $break-point-md) {
+  .button {
+    font-size: 14px;
+  }
+}

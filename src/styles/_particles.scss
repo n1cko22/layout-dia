@@ -1,0 +1,81 @@
+@mixin particles($width, $color, $top:null, $right:null, $bottom:null, $left:null) {
+  width: $width;
+  height: $width * 2.5;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  border-radius: $width;
+  border-color: $color;
+  transform: rotate(30deg);
+}
+
+.particles {
+
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  &__relative {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__item {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    border: 4px solid;
+    opacity: .4;
+
+    &--1 {
+      @include particles(18px, $accent-color, $top:26%, $left: 27%)
+    }
+
+    &--2 {
+      @include particles(34px, $option-color-1, $top:25%, $left: 14%)
+    }
+
+    &--3 {
+      @include particles(57px, $option-color-2, $top:50%, $left: 16%)
+    }
+
+    &--4 {
+      @include particles(27px, $main-color, $top:60%, $left: 5%)
+    }
+
+    &--5 {
+      @include particles(18px, $accent-color, $top:71%, $left:30%)
+    }
+
+    &--6 {
+      @include particles(37px, pink, $top:77%, $left:8%)
+    }
+
+    &--7 {
+      @include particles(18px, $accent-color, $top:26%, $right: 27%)
+    }
+
+    &--8 {
+      @include particles(34px, $option-color-1, $top:25%, $right: 14%)
+    }
+
+    &--9 {
+      @include particles(57px, $option-color-2, $top:50%, $right: 16%)
+    }
+
+    &--10 {
+      @include particles(27px, $main-color, $top:60%, $right: 5%)
+    }
+
+    &--11 {
+      @include particles(18px, $accent-color, $top:71%, $right:30%)
+    }
+
+    &--12 {
+      @include particles(37px, pink, $top:77%, $right:8%)
+    }
+  }
+}

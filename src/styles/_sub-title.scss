@@ -1,0 +1,20 @@
+.sub-title {
+  position: relative;
+  color: $main-color;
+  padding: 0 0 21px 37px;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-repeat: no-repeat;
+  background-position-y: 2px;
+
+  &--light {
+    background-image: url(/img/vector-white.png) no-repeat;
+    color: $light-color;
+  }
+
+  &--dark {
+    background-image: url(/img/vector-blue.png) no-repeat;
+  }
+}

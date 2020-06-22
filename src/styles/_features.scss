@@ -1,0 +1,152 @@
+.features {
+  padding: 200px 0 160px;
+
+  &__bg-position-fix {
+    position: relative;
+    z-index: 0;
+    overflow: visible;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $option-color-2;
+    bottom: -648px;
+    width: 729px;
+    height: 2248px;
+    transform: rotate(20deg);
+    right: -625px;
+    border-radius: 500px;
+}
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 60%;
+    height: 100%;
+    width: 35%;
+    transform: skew(-20deg);
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 0;
+      width: 100vw;
+      height: 100%;
+      background-image: url(/img/features-bg.jpg);
+      transform: skew(20deg);
+      background-size: cover;
+      left: -60%;
+    }
+  }
+
+  &__sub-title,
+  &__title,
+  &__list {
+    width: 40%;
+  }
+
+  &__item {
+    display: flex;
+    padding-bottom: 64px;
+  }
+
+  &__text {
+    padding-left: 32px;
+    color: $light-color;
+    z-index: 1;
+  }
+
+  &__img {
+    width: 64px;
+    height: 64px;
+    padding-top: 10px;
+  }
+}
+
+@media screen and (max-width: $break-point-lg) {
+  .features {
+
+    &__bg {
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      transform: skew(0);
+      background-image: url(img/pointsw.jpeg.jpg);
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+
+      &::after {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform: skew(0);
+        opacity: .8;
+        background-color: $main-color;
+        background-image: none;
+        z-index: 1;
+      }
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    &__sub-title,
+    &__title {
+      width: 60%;
+      margin: 0 auto;
+    }
+
+    &__item {
+      width: 60%;
+    }
+  }
+}
+
+@media screen and (max-width: $break-point-md) {
+  .features {
+
+    &__sub-title,
+    &__title {
+      width: 90%;
+    }
+
+    &__item {
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: $break-point-sm) {
+  .features {
+
+    &__sub-title,
+    &__title {
+      width: 90%;
+    }
+
+    &__item {
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+    }
+
+    &__text {
+      padding: 0;
+      text-align: center;
+    }
+
+    &__img {
+      padding-bottom: 36px;
+      z-index: 1;
+    }
+  }
+}

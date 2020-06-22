@@ -1,0 +1,35 @@
+.welcome {
+  padding: 160px 0;
+  width: 46%;
+  max-width: 800px;
+  margin: 0 auto;
+
+  &__text {
+    font-size: 24px;
+    font-weight: 600;
+    color: $dark-color;
+  }
+}
+
+@media screen and (max-width: $break-point-lg) {
+  .welcome {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: $break-point-md) {
+  .welcome {
+    padding: 40px 0 160px 0;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: $break-point-sm) {
+  .welcome {
+
+
+    &__text {
+      font-size: 20px;
+    }
+  }
+}
